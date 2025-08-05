@@ -717,3 +717,206 @@ body.no-scroll {
   mask-image: url(./images/about-pic-rec.png);
   mask-repeat: no-repeat;
 }
+
+
+/*---------most-sale---------------*/
+.product-carousel-container {
+ 
+    position: relative;
+}
+
+/* Carousel Header */
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.carousel-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.carousel-header a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    /* border: 1px solid #ddd; */
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.carousel-header a:hover {
+    /* background-color: #f1f1f1;
+    color: #000; */
+}
+
+/* Product Card Styling (داخل هر آیتم کروسل) */
+.product-card {
+    background-color: #fff;
+    border: .5px solid hsl(0, 0%, 74%);
+    /* border-radius: 8px; */
+    /* text-align: center; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* برای هم‌قد شدن کارت‌ها */
+    padding-top: 10px;
+     transition: all .5s ease;
+}
+.pro-card-img{
+    height: 200px;
+    padding:20px 15px;
+
+    
+
+}
+.en-font {
+    font-family: Arial, sans-serif;
+}
+
+.product-card img {
+    object-fit: contain;
+    height: 100%;
+    /* width: 80% !important;
+    height: auto;
+    margin: 20px auto 10px;
+    object-fit: contain;
+    aspect-ratio: 1 / 1; */
+}
+
+.product-info {
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-brand {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 5px;
+    padding: 0px 15px;
+
+}
+
+.product-info h3 {
+    font-size: 15px;
+    color: #333;
+    margin: 10px 0px;
+    font-weight: 600;
+    flex-grow: 1;
+     padding: 0px 15px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 8px; */
+    padding: 12px 15px;
+     transition: all .3s ease;
+}
+
+.product-price {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.add-to-cart-btn {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+  
+}
+.product-card:hover{
+    box-shadow: 0px 0px 20px -8px #666;
+     transition: all .3s ease;
+}
+.product-card:hover .product-card{
+    transform: scale(1.01);
+        transition: all .3s ease;
+}
+
+/* Highlighted Card Style */
+.product-card:hover .product-footer {
+    background: linear-gradient(to bottom, #fdb813, #f7941e);
+    transition: all .3s ease;
+}
+
+.product-card:hover .product-price {
+    color: #fff;
+}
+
+.product-card:hover .add-to-cart-btn img{
+    filter: brightness(100%) invert(1);
+}
+
+/* --- استایل‌های سفارشی برای Owl Carousel --- */
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    color: #333 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+    background: #f1f1f1 !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: -20px; /* در حالت غیر RTL */
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: -20px; /* در حالت غیر RTL */
+}
+
+/* با توجه به rtl:true، موقعیت دکمه‌ها برعکس می‌شود */
+html[dir="rtl"] .owl-carousel .owl-nav button.owl-prev {
+    right: -20px;
+    left: auto;
+}
+html[dir="rtl"] .owl-carousel .owl-nav button.owl-next {
+    left: -20px;
+    right: auto;
+}
+
+.owl-carousel .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #ccc;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.owl-carousel .owl-dots .owl-dot.active span {
+    background: #f7941d;
+}
