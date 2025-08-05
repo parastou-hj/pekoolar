@@ -310,12 +310,16 @@ $(document).ready(function(){
         });
 
          $(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
+            $('#most-sale-owl').owlCarousel({
                 rtl: true, 
                 loop: true, 
                 // margin: 20, 
                 nav: true, 
                 dots: true, 
+                 autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                smartSpeed: 1000,
                 navText: [">", "<"], 
                 responsive:{
                     0:{
@@ -330,3 +334,102 @@ $(document).ready(function(){
                 }
             });
         });
+
+
+
+        //blog
+
+  // Add animation to cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observerCareer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.blog-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observerCareer.observe(card);
+        });
+
+$(document).ready(function() {
+  const initializeOwlCarousel = () => {
+      const advantagesContainer=$('.blog-cards-container')
+      if (window.innerWidth > 991) {
+          if (typeof advantagesContainer.data('owl.carousel') != 'undefined') {
+              advantagesContainer.data('owl.carousel').destroy();
+            }
+            advantagesContainer.removeClass('owl-carousel');
+          
+      } else if(window.innerWidth <= 991) {
+          if (!$('.blog-cards-container').hasClass('owl-carousel')) {
+              $('.blog-cards-container').addClass('owl-carousel').owlCarousel({
+                  rtl: true,
+                  items: 1,
+                //   margin:10,
+                  dots: true,
+                  loop: true,
+                //   autoplay: true,
+                //   autoplayTimeout: 3000,
+                  autoplayHoverPause: true,
+                  // navText: [
+                  //     '<i class="fa-solid fa-chevron-right"></i>',
+                  //     '<i class="fa-solid fa-chevron-left"></i>'
+                  // ],
+                  responsive: {
+                    0:{
+                        items:1.5
+                    },
+                    800:{
+                        items:2
+                    }
+                     
+                      
+                  }
+              });
+             
+
+              
+          }
+      }
+  };
+
+  initializeOwlCarousel();
+  $(window).resize(initializeOwlCarousel);
+
+
+});
+
+$(document).ready(function(){
+    $('#brands-owl').owlCarousel({
+        rtl: true,             
+        loop: true,               
+        // margin: 20,               
+        autoplay: true,          
+        autoplayTimeout: 3000,    
+        autoplayHoverPause: true, 
+        nav: false,             
+        dots: false,            
+        responsive:{
+            0:{
+                items: 2 
+            },
+            600:{
+                items: 4 
+            },
+            1000:{
+                items: 6 
+            }
+        }
+    });
+});
