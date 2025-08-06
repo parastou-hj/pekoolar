@@ -1,3 +1,4 @@
+
  $(document).ready(function() {
     const headerMoving = () => {
  
@@ -7,12 +8,8 @@
       const $downHeader = $('.header-down');
       const $advertise = $('.advertise');
       const $resSearch = $('.res-search');
-      
-      
-      const resSearchHeight = $resSearch.outerHeight() || 0;
       const downHeaderHeight = $downHeader.outerHeight() || 0;
       const mainHeaderHeight = $mainHeader.outerHeight() || 0;
-      const adHeaderHeight = $advertise.outerHeight() || 0;
   
      
       let lastScrollTop = 0;
@@ -22,19 +19,13 @@
       $mainHeader.removeClass('lg-header-up');
       $downHeader.removeClass('header-hidden');
       $resSearch.removeClass('header-hidden');
-      
+       const headerHeight = mainHeaderHeight + downHeaderHeight;
+        const totalHeight = headerHeight;
+      $headerContainer.css('height', headerHeight);
+        $('body').css('padding-top', totalHeight);
       
       if (window.innerWidth > 992) {
-        console.log("Desktop mode activated");
-        
-        const headerHeight = mainHeaderHeight + downHeaderHeight;
-        const totalHeight = headerHeight + adHeaderHeight;
-        
-       
-        $headerContainer.css('height', headerHeight);
-        $('body').css('padding-top', totalHeight);
-        
-        // Scroll handler for desktop
+
         $(window).off('scroll.headerDesktop').on('scroll.headerDesktop', function() {
           const currentScroll = $(this).scrollTop();
           
@@ -46,7 +37,7 @@
               $downHeader.addClass('header-hidden');
               $headerContainer.css('height', mainHeaderHeight);
               isHeaderVisible = false;
-              console.log("Desktop: Hiding header-down");
+              
             } 
             
             else if (currentScroll < lastScrollTop && !isHeaderVisible) {
@@ -54,7 +45,7 @@
               $downHeader.removeClass('header-hidden');
               $headerContainer.css('height', headerHeight);
               isHeaderVisible = true;
-              console.log("Desktop: Showing header-down");
+           
             }
           } else {
             
@@ -68,48 +59,7 @@
         });
       } 
       
-      else {
-        console.log("Mobile mode activated");
-        
-        const headerHeight = mainHeaderHeight + resSearchHeight;
-        const totalHeight = headerHeight + adHeaderHeight;
-        
-       
-        $headerContainer.css('height', headerHeight);
-        $('body').css('padding-top', totalHeight);
-        
-       
-        $(window).off('scroll.headerMobile').on('scroll.headerMobile', function() {
-          const currentScroll = $(this).scrollTop();
-          
-          if (currentScroll > 50) {
-            
-            if (currentScroll > lastScrollTop && isHeaderVisible) {
-              $mainHeader.addClass('lg-header-up');
-              $resSearch.addClass('header-hidden');
-              $headerContainer.css('height', mainHeaderHeight);
-              isHeaderVisible = false;
-              console.log("Mobile: Hiding res-search");
-            } 
-            
-            else if (currentScroll < lastScrollTop && !isHeaderVisible) {
-              $mainHeader.removeClass('lg-header-up');
-              $resSearch.removeClass('header-hidden');
-              $headerContainer.css('height', headerHeight);
-              isHeaderVisible = true;
-              console.log("Mobile: Showing res-search");
-            }
-          } else {
-            
-            $mainHeader.removeClass('lg-header-up');
-            $resSearch.removeClass('header-hidden');
-            $headerContainer.css('height', headerHeight);
-            isHeaderVisible = true;
-          }
-          
-          lastScrollTop = currentScroll;
-        });
-      }
+     
     };
   
     headerMoving();
@@ -288,7 +238,7 @@ $(document).ready(function(){
                 autoplayTimeout: 5000,
                 autoplayHoverPause: true,
                 smartSpeed: 1000,
-                // stagePadding: 100,
+               
                 responsive: {
                     0: {
                         items: 1,
@@ -300,11 +250,11 @@ $(document).ready(function(){
             });
             
             // Custom Navigation
-            $('#baner-right').click(function() {
+            $('.baner-right').click(function() {
                 articlesCarousel.trigger('prev.owl.carousel');
             });
             
-            $('#baner-left').click(function() {
+            $('.baner-left').click(function() {
                 articlesCarousel.trigger('next.owl.carousel');
             });
         });
@@ -313,14 +263,13 @@ $(document).ready(function(){
             $('#most-sale-owl').owlCarousel({
                 rtl: true, 
                 loop: true, 
-                // margin: 20, 
-                nav: true, 
+                nav:true,
                 dots: true, 
                  autoplay: true,
                 autoplayTimeout: 4000,
                 autoplayHoverPause: true,
                 smartSpeed: 1000,
-                navText: [">", "<"], 
+              navText: [ "<i class='fa fa-chevron-right'></i>","<i class='fa fa-chevron-left'></i>"],
                 responsive:{
                     0:{
                         items:1 
@@ -328,7 +277,13 @@ $(document).ready(function(){
                     600:{
                         items:2 
                     },
-                    1000:{
+                     800:{
+                        items:3 
+                    },
+                      991:{
+                        items:4 
+                    },
+                    1200:{
                         items:5
                     }
                 }
@@ -338,8 +293,9 @@ $(document).ready(function(){
 
 
         //blog
-
-  // Add animation to cards on scroll
+        $(document).ready(function() {
+            if(window.innerWidth > 991){
+                
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -361,6 +317,10 @@ $(document).ready(function(){
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observerCareer.observe(card);
         });
+            }
+        })
+
+ 
 
 $(document).ready(function() {
   const initializeOwlCarousel = () => {
@@ -379,8 +339,8 @@ $(document).ready(function() {
                 //   margin:10,
                   dots: true,
                   loop: true,
-                //   autoplay: true,
-                //   autoplayTimeout: 3000,
+                  autoplay: true,
+                  autoplayTimeout: 4000,
                   autoplayHoverPause: true,
                   // navText: [
                   //     '<i class="fa-solid fa-chevron-right"></i>',
@@ -391,7 +351,7 @@ $(document).ready(function() {
                         items:1.5
                     },
                     800:{
-                        items:2
+                        items:2.5
                     }
                      
                       
