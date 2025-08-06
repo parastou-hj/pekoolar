@@ -433,3 +433,27 @@ $(document).ready(function(){
         }
     });
 });
+
+ $('.user').on('mouseenter',function(){
+    $('.user-menu').addClass('active'); 
+  })
+
+   $('body').on('mouseover',function(e){
+    if(!e.target.closest('.user')){
+    $('.user-menu').removeClass('active');
+    // $('.cart-menu-container').removeClass('active');
+    }
+  })
+
+
+
+
+
+  //footer
+
+
+var tabs=$('.footer-tab');
+    tabs.on('click', function(){
+        // $(this).addClass('active');
+        $('#'+$(this).data('tab')).toggleClass('active')
+    })

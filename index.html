@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
      <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>رکولار</title>
 </head>
 <body>
 
@@ -16,24 +16,144 @@
        
         <div class="container-fluid header-container p-0">
             <div class=" header-back">
-                <div class="row col-xl-11 header-top align-items-center py-3">
+                <div class="row col-xl-11 header-top align-items-center py-2">
                     <div class="row col-lg-7 px-0">
-                        <div class="col-6 px-0 d-flex">
-                              <button class="mobile-menu-toggle" aria-label="Open menu">
+                        <div class="col-4 px-0 d-flex align-items-center">
+                              <button class="mobile-menu-toggle mx-1" aria-label="Open menu">
                                     <i class="fa fa-bars"></i> 
                                 </button>
-                            <div class="user">
+                           <div class="user position-relative mx-1" id="userDropdown">
                                 <img src="./images/user.png" alt="">
                                 <span>ورود / ثبت نام</span>
+                                    <div class="user-menu">
+                                        <div class="user-header">
+                                            <div class="user-avatar">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <div class="user-info">
+                                                <div class="user-name">حساب کاربری</div>
+                                                <div class="user-subtitle">نام کاربر</div>
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="menu-item">
+                                            <i class="fa fa-user-pen"></i>
+                                            <span>ویرایش مشخصات فردی</span>
+                                        </a>
+
+                                        <div class="wallet-item">
+                                            <div class="wallet-info">
+                                                <i class="fa fa-wallet wallet-icon"></i>
+                                                <span>کیف پول</span>
+                                            </div>
+                                            <span class="wallet-amount">۰ تومان</span>
+                                        </div>
+
+                                        <a href="#" class="menu-item">
+                                            <i class="fa fa-heart"></i>
+                                            <span>لیست علاقه‌مندی</span>
+                                        </a>
+
+                                        <a href="#" class="menu-item">
+                                            <i class="fa fa-box"></i>
+                                            <span>سفارش‌های من</span>
+                                        </a>
+
+                                        <a href="#" class="menu-item logout">
+                                            <i class="fa fa-right-from-bracket"></i>
+                                            <span>خروج از حساب کاربری</span>
+                                        </a>
+                                    </div>
                             </div>
-                            <div class="cart">
-                                <img src="./images/cart.png" alt="">
+                             <div class="cart me-3">
+                                <img src="./images/cart.png" alt="سبد خرید">
+                                <span class="cart-badge">3</span>
+                                
+                                
+                                <div class="cart-dropdown">
+                                    <div class="cart-header">
+                                        <h4><i class="fas fa-shopping-cart"></i> سبد خرید شما</h4>
+                                        <p class="cart-count">3 محصول در سبد خرید</p>
+                                    </div>
+                                    
+                                  <div class="cart-items">
+                                    <div class="cart-item">
+                                        <div class="cart-item-image">
+                                            <img src="./images/pro1.png" alt="روغن موتور">
+                                        </div>
+                                        <div class="cart-item-details">
+                                            <div class="cart-item-name">روغن موتور 10W-40 الف</div>
+                                            <div class="cart-item-info">
+                                                <span class="cart-item-quantity">تعداد: 2</span>
+                                                <span class="cart-item-price">980,000 تومان</span>
+                                            </div>
+                                        </div>
+                                        <button class="cart-item-remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="cart-item">
+                                        <div class="cart-item-image">
+                                            <img src="./images/most-p1.png" alt="فیلتر هوا">
+                                        </div>
+                                        <div class="cart-item-details">
+                                            <div class="cart-item-name">فیلتر هوای خودرو پراید</div>
+                                            <div class="cart-item-info">
+                                                <span class="cart-item-quantity">تعداد: 1</span>
+                                                <span class="cart-item-price">130,000 تومان</span>
+                                            </div>
+                                        </div>
+                                        <button class="cart-item-remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="cart-item">
+                                        <div class="cart-item-image">
+                                            <img src="./images/most-p2.png" alt="ضد یخ">
+                                        </div>
+                                        <div class="cart-item-details">
+                                            <div class="cart-item-name">ضد یخ کاسپین چهار فصل</div>
+                                            <div class="cart-item-info">
+                                                <span class="cart-item-quantity">تعداد: 1</span>
+                                                <span class="cart-item-price">215,000 تومان</span>
+                                            </div>
+                                        </div>
+                                        <button class="cart-item-remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+
+                                   
+                                </div>
+
+
+
+                                    <div class="cart-footer">
+                                        <div class="cart-total">
+                                            <span>مجموع:</span>
+                                            <span>26,400,000 تومان</span>
+                                        </div>
+                                        <div class="cart-buttons">
+                                            <a href="#" class="cart-btn view-cart">
+                                                <i class="fas fa-shopping-cart"></i>
+                                                مشاهده سبد
+                                            </a>
+                                            <a href="#" class="cart-btn checkout">
+                                                <i class="fas fa-credit-card"></i>
+                                                تسویه حساب
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
-                        <div class="col-6">
-                            <div class="search">
+                        <div class="col-8 d-flex align-items-center">
+                            <div class="search-container position-relative">
                                 <img src="./images/search.png" alt="">
+                                <input type="text" placeholder="جستجو ...">
                             </div>
                         </div>
                     </div>
@@ -49,7 +169,7 @@
             </div>
               <div class=" header-down container-fluid p-0">
                <div class="row col-xl-11">
-                 <nav class="d-flex">
+                 <nav class="d-flex px-0">
                     <ul class="ps-3 main-nav">
                           <li class="sidebar-header">
                             <span class="sidebar-title">منو اصلی</span>
@@ -63,90 +183,147 @@
                                 کالاها
                            
                         </a>
-                        <div class="megamenu-container">
-                            <div class="container">
-                                <div class="megamenu-wrapper">
-                                    <!-- Categories Column -->
-                                    <div class="megamenu-column categories-column">
-                                        <h3 class="megamenu-title">دسته‌بندی کلاس‌ها</h3>
-                                        <ul class="megamenu-list categories-list">
-                                            <li class="category-item" data-category="painting-classes">
-                                                <a href="#">کلاس‌های نقاشی</a>
-                                            </li>
-                                            <li class="category-item" data-category="sketching-classes">
-                                                <a href="#">کلاس‌های طراحی</a>
-                                            </li>
-                                            <li class="category-item" data-category="handicrafts-classes">
-                                                <a href="#">هنرهای دستی و تجسمی</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    <div class="megamenu-container">
+    <div class="container">
+        <div class="megamenu-wrapper">
+            <!-- دسته‌بندی‌ها -->
+            <div class="megamenu-column categories-column">
+                <h3 class="megamenu-title">دسته‌بندی محصولات</h3>
+                <ul class="megamenu-list categories-list">
+                    <li class="category-item" data-category="motor-oil">
+                        <a href="#">روغن‌های موتور</a>
+                    </li>
+                    <li class="category-item" data-category="industrial-oil">
+                        <a href="#">روغن‌های صنعتی</a>
+                    </li>
+                    <li class="category-item" data-category="gearbox-oil">
+                        <a href="#">روغن‌های گیربکس</a>
+                    </li>
+                    <li class="category-item" data-category="filters">
+                        <a href="#">فیلترهای خودرو</a>
+                    </li>
+                    <li class="category-item" data-category="accessories">
+                        <a href="#">اکسسوری‌های خودرو</a>
+                    </li>
+                    <li class="category-item" data-category="antifreeze">
+                        <a href="#">ضد یخ</a>
+                    </li>
+                </ul>
+            </div>
 
-                                    <!-- Subcategories Column (Dynamic) -->
-                                    <div class="megamenu-column subcategories-column">
-                                        <!-- Painting Classes Subcategories -->
-                                        <div class="subcategory-content" id="painting-classes">
-                                            <h3 class="megamenu-title">کلاس‌های نقاشی</h3>
-                                            <ul class="megamenu-list subcategory-list">
-                                                <li><a href="#">نقاشی با رنگ روغن</a></li>
-                                                <li><a href="#">نقاشی آبرنگ</a></li>
-                                                <li><a href="#">نقاشی اکریلیک</a></li>
-                                            </ul>
-                                            <a href="#" class="view-all-link">مشاهده همه کلاس‌های نقاشی <i class="fa fa-angle-left"></i></a>
-                                        </div>
+            <!-- زیر دسته‌بندی‌ها -->
+            <div class="megamenu-column subcategories-column">
+                <!-- روغن موتور -->
+                <div class="subcategory-content" id="motor-oil">
+                    <h3 class="megamenu-title">روغن‌های موتور</h3>
+                    <ul class="megamenu-list subcategory-list">
+                        <li><a href="#">روغن موتور بنزینی</a></li>
+                        <li><a href="#">روغن موتور دیزلی</a></li>
+                        <li><a href="#">روغن نیمه سنتتیک</a></li>
+                    </ul>
+                    <a href="#" class="view-all-link">مشاهده همه روغن‌های موتور <i class="fa fa-angle-left"></i></a>
+                </div>
 
-                                        <!-- Sketching Classes Subcategories -->
-                                        <div class="subcategory-content" id="sketching-classes">
-                                            <h3 class="megamenu-title">کلاس‌های طراحی</h3>
-                                            <ul class="megamenu-list subcategory-list">
-                                                <li><a href="#">طراحی با مداد</a></li>
-                                                <li><a href="#">طراحی چهره</a></li>
-                                                <li><a href="#">اسکیس و پرسپکتیو</a></li>
-                                            </ul>
-                                            <a href="#" class="view-all-link">مشاهده همه کلاس‌های طراحی <i class="fa fa-angle-left"></i></a>
-                                        </div>
+                <!-- روغن صنعتی -->
+                <div class="subcategory-content" id="industrial-oil">
+                    <h3 class="megamenu-title">روغن‌های صنعتی</h3>
+                    <ul class="megamenu-list subcategory-list">
+                        <li><a href="#">روغن هیدرولیک</a></li>
+                        <li><a href="#">روغن کمپرسور</a></li>
+                        <li><a href="#">روغن دنده صنعتی</a></li>
+                    </ul>
+                    <a href="#" class="view-all-link">مشاهده همه روغن‌های صنعتی <i class="fa fa-angle-left"></i></a>
+                </div>
 
-                                        <!-- Handicrafts Classes Subcategories -->
-                                        <div class="subcategory-content" id="handicrafts-classes">
-                                            <h3 class="megamenu-title">هنرهای دستی و تجسمی</h3>
-                                            <ul class="megamenu-list subcategory-list">
-                                                <li><a href="#">ساخت مجسمه و حجم</a></li>
-                                                <li><a href="#">کلاژ و هنر کاغذی</a></li>
-                                                <li><a href="#">نقاشی روی شیشه و سرامیک</a></li>
-                                            </ul>
-                                            <a href="#" class="view-all-link">مشاهده همه هنرهای دستی و تجسمی <i class="fa fa-angle-left"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- روغن گیربکس -->
+                <div class="subcategory-content" id="gearbox-oil">
+                    <h3 class="megamenu-title">روغن‌های گیربکس</h3>
+                    <ul class="megamenu-list subcategory-list">
+                        <li><a href="#">روغن گیربکس دستی</a></li>
+                        <li><a href="#">روغن گیربکس اتومات</a></li>
+                        <li><a href="#">روغن دیفرانسیل</a></li>
+                    </ul>
+                    <a href="#" class="view-all-link">مشاهده همه روغن‌های گیربکس <i class="fa fa-angle-left"></i></a>
+                </div>
+
+                <!-- فیلتر خودرو -->
+                <div class="subcategory-content" id="filters">
+                    <h3 class="megamenu-title">فیلترهای خودرو</h3>
+                    <ul class="megamenu-list subcategory-list">
+                        <li><a href="#">فیلتر روغن</a></li>
+                        <li><a href="#">فیلتر هوا</a></li>
+                        <li><a href="#">فیلتر کابین</a></li>
+                        <li><a href="#">فیلتر سوخت</a></li>
+                    </ul>
+                    <a href="#" class="view-all-link">مشاهده همه فیلترهای خودرو <i class="fa fa-angle-left"></i></a>
+                </div>
+
+                <!-- اکسسوری خودرو -->
+                <div class="subcategory-content" id="accessories">
+                    <h3 class="megamenu-title">اکسسوری‌های خودرو</h3>
+                    <ul class="megamenu-list subcategory-list">
+                        <li><a href="#">اسپری تمیزکننده</a></li>
+                        <li><a href="#">خوشبوکننده</a></li>
+                        <li><a href="#">لوازم جانبی داخلی</a></li>
+                    </ul>
+                    <a href="#" class="view-all-link">مشاهده همه اکسسوری‌های خودرو <i class="fa fa-angle-left"></i></a>
+                </div>
+
+                <!-- ضد یخ -->
+                <div class="subcategory-content" id="antifreeze">
+                    <h3 class="megamenu-title">ضد یخ</h3>
+                    <ul class="megamenu-list subcategory-list">
+                        <li><a href="#">ضد یخ چهار فصل</a></li>
+                        <li><a href="#">ضد یخ سبز</a></li>
+                        <li><a href="#">ضد یخ قرمز</a></li>
+                    </ul>
+                    <a href="#" class="view-all-link">مشاهده همه محصولات ضد یخ <i class="fa fa-angle-left"></i></a>
+                </div>
+            </div>
+            <div class="megamenu-column featured-column">
+    <div class="featured-product">
+        <div class="featured-image">
+            <img src="./images/pro4.png" alt="ضد یخ کاسپین">
+        </div>
+        <div class="featured-content">
+            <h3>ضد یخ چهار فصل کاسپین</h3>
+            <p>محافظت کامل از سیستم خنک‌کننده خودرو در برابر یخ‌زدگی و زنگ‌زدگی</p>
+            <a href="#" class="featured-btn">مشاهده محصول <i class="fa fa-angle-left"></i></a>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
 
                         </li>
-                        <li  class="has-submenu nav-item">
-                            <a href="#">
-                               خودروهای سواری
-                        </a>
-                         <div class="sub-menu-content">
-                                <div class="sub-menu-items">
-                                <div class="sub-menu-item">
-                                    <a href="#">تاریخچه شرکت</a>
-                                </div>
-                                <div class="sub-menu-item">
-                                    <a href="#">چشم انداز و اهداف</a>
-                                </div>
-                                <div class="sub-menu-item">
-                                    <a href="#">گواهینامه ها</a>
-                                </div>
-                                <div class="sub-menu-item">
-                                    <a href="#">تیم مدیریت</a>
-                                </div>
-                                <div class="sub-menu-item">
-                                    <a href="#">ساختار سازمانی</a>
-                                </div>
-                            </div>
-                          
-                         </div>
-                        </li>
+                    <li class="has-submenu nav-item">
+    <a href="#">
+        خودروهای سواری
+    </a>
+    <div class="sub-menu-content">
+        <div class="sub-menu-items">
+            <div class="sub-menu-item">
+                <a href="#">انواع روغن خودرو</a>
+            </div>
+            <div class="sub-menu-item">
+                <a href="#">فیلترهای مصرفی</a>
+            </div>
+            <div class="sub-menu-item">
+                <a href="#">قطعات یدکی عمومی</a>
+            </div>
+            <div class="sub-menu-item">
+                <a href="#">لوازم جانبی و اکسسوری</a>
+            </div>
+            <div class="sub-menu-item">
+                <a href="#">ضد یخ و افزودنی‌ها</a>
+            </div>
+        </div>
+    </div>
+</li>
+
                         
                         <li class="nav-item has-submenu">
                             <a href="#">خودروهای دیزلی</a>
@@ -286,7 +463,7 @@
                     <div class="left px-0">
                         <div class="about-pic position-relative">
                             <!-- <img src="./images/shape.png" alt="" class="about-shape"> -->
-                            <img src="./images/about-pic.png" alt="" class="about-img">
+                            <img src="./images/b-3.png" alt="" class="about-img">
                         </div>
                     </div>
                 </div>
@@ -516,10 +693,31 @@
         </div>
        </div>
     </section>
-    <div class="baners-category container-fluid">
-        <div class="row col-xl-11">
-            <div class="baners">
-                .baner-item1
+    <div class="baners-category container-fluid py-5 my-5">
+        <div class="row col-xl-11 d-flex justify-content-center">
+            <div class="image-cards">
+                 <div class="image-card "> 
+                    <img src="./images/b-1.png" alt="" class="card-image">
+            <div class="card-overlay">
+                <h2 class="card-text">کاربردها در صنایع</h2>
+            </div>
+        </div>
+        
+      
+        <div class="image-card ">
+            <img src="./images/banner.png" alt="" class="card-image">
+            <div class="card-overlay">
+                <h2 class="card-text">فناوری پیشرفته</h2>
+            </div>
+        </div>
+        
+        <div class="image-card ">
+            <img src="./images/b-3.png" alt="" class="card-image">
+            <div class="card-overlay">
+                <h2 class="card-text">خرید عمده</h2>
+            </div>
+            
+        </div>
             </div>
         </div>
 
@@ -527,6 +725,136 @@
 
 
     </main>
+
+    <footer style="background-image: url(./images/footer-back.png);" class="site-footer">
+          <div class="container-fluid footer-p-one py-lg-3 py-2 px-0" >
+            <div class="row col-xl-11 p-one main-row py-5">
+              <div class="col-lg-3">
+                 <div class="contact-container">
+        <h2>تیم فروش و بازاریابی رکولار</h2>
+        
+        <div class="phone-box ps-3">
+            <img src="./images/phone.png" alt="">
+            <span class="me-auto">320 762 55 021</span>
+            <span class="separator">|</span>
+            <span>576 709 55 021</span>
+        </div>
+        
+        <div class="secondary-contact ps-3">
+            <img src="./images/headephone.png" alt="">
+            <span>ارتباط با ما:</span>
+            <span class="me-auto">100 00 99 0936</span>
+        </div>
+
+        <div class="working-hours">
+           <img src="./images/clock.png" alt="">
+            <div class="text-content">
+                <div>شنبه تا چهارشنبه از ۹ صبح الی ۷ عصر</div>
+                <div>پنجشنبه ها از ۹ صبح الی ۱۴ ظهر</div>
+            </div>
+        </div>
+    </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="footer-list-container d-flex">
+                  <div class="footer-list">
+                    <div class="footer-tab" data-tab="about">
+                      <span>محصولات</span>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="footer-list-content" id="about">
+                      <div><a href="#">لیست محصولات</a></div>
+                      <div><a href="#">لیست قیمت محصولات</a></div>
+                      <div><a href="#">لیست قیمت محصولات</a></div>
+                     
+                    </div>
+                  </div>
+                  <div class="footer-list">
+                    <div class="footer-tab" data-tab="footer-pro">
+                      <span>خدمات</span>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+  
+                    <div class="footer-list-content" id="footer-pro">
+                      <div><a href="#">دانلود کاتالوگ</a></div>
+                      <div><a href="#">پرسشنامه رضایت مشتریان</a></div>
+                      <div><a href="#">اطلاعیه سهام (کدال)</a></div>
+                     
+                    </div>
+                  </div>
+                  <div class="footer-list">
+                    <div class="footer-tab" data-tab="access">
+                      <span>مجموعه رکولار</span>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+  
+                    <div class="footer-list-content" id="access">
+                      <div><a href="#">ارتباط با ما</a></div>
+                      <div><a href="#">مقالات</a></div>
+                      <div><a href="#">دانلود کاتالوگ</a></div>
+
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 footer-last d-flex">
+                  <div>
+                      <a href="#">
+                        <img src="./images/e-namad1.png" alt="" />
+                      </a>
+                  </div>
+                  <div>
+                      <a href="#">
+                        <img src="./images/e-namad2.png" alt="" class="" />
+                      </a>
+                  </div>
+                  
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid px-0 footer-p-two">
+            <div class="row col-xl-11">
+              <div class="footer-container">
+           
+            <div class="footer-right">
+                <p class="copyright-text">© کلیه حقوق این سایت متعلق به شرکت رکولار می باشد.</p>
+                <p class="credit-text">website designed by NONEGAR PARDAZESH , developed by NONEGAR</p>
+            </div>
+             <div class="footer-left">
+               
+                <ul class="social-icons">
+                    <li><a href="#" >
+                        <img src="./images/bale.png" alt="">
+                    </a></li>
+                      <li><a href="#" >
+                        <img src="./images/eita.png" alt="">
+                    </a></li>
+                      <li><a href="#" >
+                        <img src="./images/twit.png" alt="">
+                    </a></li>
+                      <li><a href="#" >
+                        <img src="./images/yutub.png" alt="">
+                    </a></li>
+                      <li><a href="#" >
+                        <img src="./images/insta.png" alt="">
+                    </a></li>
+                      <li><a href="#" >
+                        <img src="./images/telg.png" alt="">
+                    </a></li>
+                       <li><a href="#" >
+                        <img src="./images/linkd.png" alt="">
+                    </a></li>
+                    
+                </ul>
+                 <a href="#" class="logo-link">
+                    <img src="./images/footer-logo.png">
+                </a>
+            </div>
+        </div>
+            </div>
+          </div>
+    </footer>
     
 
 
