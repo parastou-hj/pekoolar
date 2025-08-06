@@ -1188,7 +1188,7 @@ html[dir="rtl"] .owl-carousel .owl-nav button.owl-next {
 
 .brand-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 20px;
     border-color: transparent;
 }
 
